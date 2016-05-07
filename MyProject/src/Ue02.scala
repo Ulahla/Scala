@@ -13,14 +13,16 @@ object Ue02 {
   
 //  Main
   def main (args: Array[String]) {
-	  println("Quicksort:")
-	  println("Ausgangsliste = " + falle)
-	  println("Nach quicksort " + quicksort(falle))
-	  println("Ausgangsliste = " + li_unsort)
-    println("Nach quicksort " + quicksort(li_unsort))
-    println("Ausgangsliste = " + li)
-    println("Nach quicksort " + quicksort(li))
-//    println("blebtdrinTest " + test(li, (x => x >= 5)))
+//	  println("Quicksort:")
+//	  println("Ausgangsliste = " + falle)
+//	  println("Nach quicksort " + quicksort(falle))
+//	  println("Ausgangsliste = " + li_unsort)
+//    println("Nach quicksort " + quicksort(li_unsort))
+//    println("Ausgangsliste = " + li)
+//    println("Nach quicksort " + quicksort(li))
+    println("blebtdrinTest " + test(li, (x => x >= 5))) 
+    println("Ausgangsliste = " + li_unsort)
+    println("Nach quicksort " + quicksortEinsPunktNull(li_unsort))
   }
 	
 // Quicksort I - Pivot suchen, Liste gemäß Pivot teilen, sortieren und wieder zusammensetzen
@@ -51,30 +53,41 @@ object Ue02 {
   	def quicksortEinsPunktNull (l: List[Int]): List[Int] = {
 //  	  die aus einer Liste eine gefilterte Liste derjenigen Elemente erstellt, die das Prädikat bleibtdrin erfüllen
   	  def filter (l: List[Int], bleibtdrin: Int ⇒ Boolean): List[Int] = {
+//  	    println("in filter " + l)
   	    if (l == Nil) Nil
   	    else 
-  	      if (l.head == bleibtdrin) l.head :: filter(l.tail, bleibtdrin)
-  	    List(4,12,1988)  
+  	      if (bleibtdrin(l.head)) l.head :: filter(l.tail, bleibtdrin)
+  	      else filter(l.tail, bleibtdrin)
+//  	    List(4,12,1988)  
   	  }
   	  
 //    die eine Liste aufteilt in zwei Listen, deren Elemente kleiner oder kleinergleich bzw. größergleich oder größer als x sind 
   	  def split (l: List[Int], x: Int): (List[Int], List[Int]) = {
-  			 (List(4,12,1988), List(4,12,1988))  
+//  	    val l1 : List(List[Int], List[Int])
+//  			 if (l == Nil) List(List(), List())
+//  			 else
+  			   if (x >= l.head) split(l.tail, x)
+  			   else split(l.tail, x)
   	  }
   	  
 //    die zwei sortierte Listen zu einer sortierten Liste mit allen Elementen beider Listen zusammenfügt
   	  def merge (l1: List[Int], l2: List[Int]): List[Int] = {
-  			List(4,12,1988)    
+  	    l1 ++ l2
   	  }
-  	  List(4,12,1988)
+  	  println("kleiner(gleich) als das erste Element sind: " + filter(l.tail, (x => x <= l.head)))
+//  	  println("split " + split(l, l.head))
+//  	  split(l, l.head)
+//  	  List(4,12,1988)
+  	  merge(List(2,3,4), List (5,6,7))
   	}
   	
+//  	Testfunktion, to try out how to "map" a parameter to a function( an int to a boolean x>=5)
   	def test(l : List[Int], bleibtdrin: Int ⇒ Boolean): List[Int] = {
-		  println(l)
+//		  println(l)
   	  if(l == Nil) Nil
   	  else if(l.tail == Nil)l
   	  else
-    	  if (bleibtdrin(l.head)){ println("yes");l.head::test(l.tail, bleibtdrin);}
+    	  if (bleibtdrin(l.head))l.head::test(l.tail, bleibtdrin);
     	  else test(l.tail, bleibtdrin)
   	}
 

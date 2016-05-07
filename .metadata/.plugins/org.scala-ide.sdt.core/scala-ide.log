@@ -1,0 +1,139 @@
+2016-05-07 09:00:31,413 ERROR [Worker-2] - System.err - [org.eclipse.debug.core] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.debug.core.model.IDebugModelProvider
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2016-05-07 09:01:08,291 ERROR [ModalContext] - System.err - [org.eclipse.jdt.launching] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.internal.launching.JREContainerInitializer
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2016-05-07 09:01:10,486  WARN [ModalContext] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:01:10,487  WARN [ModalContext] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:01:11,433  WARN [ModalContext] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:01:11,433  WARN [ModalContext] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:01:14,821  WARN [Worker-5] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:01:14,824  WARN [Worker-5] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:01:25,774  WARN [Java indexing] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:01:25,775  WARN [Java indexing] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:01:39,679 ERROR [main] - System.err - [org.eclipse.jdt.debug.ui] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.internal.debug.ui.actions.ToggleBreakpointAdapter
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2016-05-07 09:01:39,761 ERROR [main] - System.err - [org.eclipse.jdt.debug] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.debug.core.IJavaHotCodeReplaceListener
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2016-05-07 09:02:21,424 ERROR [main] - System.err - [org.eclipse.jdt.junit] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.internal.junit.ui.JUnitQuickFixProcessor
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2016-05-07 09:02:21,904  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2016-05-07 09:02:22,558  WARN [Worker-7] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:02:22,559  WARN [Worker-7] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:02:35,511  WARN [Worker-6] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:02:35,512  WARN [Worker-6] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:02:37,300  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2016-05-07 09:02:39,620  WARN [Worker-5] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:02:39,621  WARN [Worker-5] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:02:46,781  WARN [Worker-5] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:02:46,781  WARN [Worker-5] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:04:59,118  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2016-05-07 09:05:57,346  WARN [Worker-7] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:05:57,347  WARN [Worker-7] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:06:22,305  WARN [Worker-10] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:06:22,305  WARN [Worker-10] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:07:21,415  WARN [Worker-2] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:07:21,415  WARN [Worker-2] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:07:39,006  WARN [Worker-2] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:07:39,006  WARN [Worker-2] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:07:59,429  WARN [Worker-0] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:07:59,430  WARN [Worker-0] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:08:15,769  WARN [Worker-2] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:08:15,770  WARN [Worker-2] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:08:36,171  WARN [Worker-0] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:08:36,171  WARN [Worker-0] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:08:41,589  WARN [Worker-2] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:08:41,589  WARN [Worker-2] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:09:56,365  WARN [Worker-2] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:09:56,365  WARN [Worker-2] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:10:59,844  WARN [Worker-1] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:10:59,844  WARN [Worker-1] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:11:18,109  WARN [Worker-2] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:11:18,109  WARN [Worker-2] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:11:33,807  WARN [Worker-11] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:11:33,808  WARN [Worker-11] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:11:57,858  WARN [Worker-1] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:11:57,858  WARN [Worker-1] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:12:27,718  WARN [Worker-2] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:12:27,718  WARN [Worker-2] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:12:45,210  WARN [Worker-0] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:12:45,210  WARN [Worker-0] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:13:21,909  WARN [Worker-11] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:13:21,910  WARN [Worker-11] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:13:42,806  WARN [Worker-1] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:13:42,806  WARN [Worker-1] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:13:44,614  WARN [Worker-7] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:13:44,614  WARN [Worker-7] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:16:04,681 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-05-07 09:16:04,681 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-05-07 09:16:04,681 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-05-07 09:17:26,213  WARN [Worker-1] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:17:26,213  WARN [Worker-1] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:17:46,020  WARN [Worker-0] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:17:46,021  WARN [Worker-0] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:18:18,892  WARN [Worker-1] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:18:18,892  WARN [Worker-1] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:18:27,471  WARN [Worker-1] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:18:27,471  WARN [Worker-1] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:19:24,604  WARN [Worker-0] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:19:24,604  WARN [Worker-0] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:19:31,324  WARN [Worker-12] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:19:31,325  WARN [Worker-12] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:19:45,578  WARN [Worker-14] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:19:45,578  WARN [Worker-14] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:21:13,787  WARN [Worker-11] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:21:13,787  WARN [Worker-11] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:22:50,891  WARN [Worker-13] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:22:50,892  WARN [Worker-13] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:25:23,615  WARN [Worker-17] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:25:23,615  WARN [Worker-17] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:25:40,790  WARN [Worker-11] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:25:40,790  WARN [Worker-11] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:26:45,020  WARN [Worker-17] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:26:45,021  WARN [Worker-17] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:26:55,346  WARN [Worker-11] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:26:55,347  WARN [Worker-11] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:27:55,809  WARN [Worker-19] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:27:55,809  WARN [Worker-19] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:28:05,640  WARN [Worker-11] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:28:05,641  WARN [Worker-11] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:28:30,378  WARN [Worker-1] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:28:30,378  WARN [Worker-1] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:40:04,765 ERROR [main] - System.err - [org.eclipse.jdt.launching] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.launching.JavaRuntime
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2016-05-07 09:40:04,870 ERROR [main] - System.err - [org.eclipse.debug.core] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.debug.core.ILaunchesListener
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2016-05-07 09:40:06,269  WARN [main] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:40:06,270  WARN [main] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:40:06,277  WARN [main] - ScalaProject - Project MyProject has platform default sourceLevel.
+2016-05-07 09:40:06,277  WARN [main] - ScalaProject - Project MyProject runs on platform default installation.
+2016-05-07 09:40:13,774 ERROR [main] - System.err - [org.eclipse.jdt.debug.ui] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.internal.debug.ui.actions.ToggleBreakpointAdapter
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2016-05-07 09:40:13,857 ERROR [main] - System.err - [org.eclipse.jdt.debug] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.debug.core.IJavaHotCodeReplaceListener
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
