@@ -3,6 +3,7 @@ object Ue02 {
 	val falle : List[Int] = List ()
   val li_unsort : List[Int] = List (4, 2, 5, 1, 3)
   val li: List[Int] = List (8, 6, 2, 4, 5, 3, 1)
+  val li_andersrum: List[Int] = List (1, 3, 5, 4, 6, 8)
   val li_unsort_test : List[Int] = List (1, 2, 3)
   
   val euro = List(1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000)
@@ -13,14 +14,16 @@ object Ue02 {
   
 //  Main
   def main (args: Array[String]) {
-//	  println("Quicksort:")
+	  println("Quicksort:")
 //	  println("Ausgangsliste = " + falle)
 //	  println("Nach quicksort " + quicksort(falle))
 //	  println("Ausgangsliste = " + li_unsort)
 //    println("Nach quicksort " + quicksort(li_unsort))
 //    println("Ausgangsliste = " + li)
 //    println("Nach quicksort " + quicksort(li))
-    println("blebtdrinTest " + test(li, (x => x >= 5))) 
+//    println("Ausgangsliste = " + li_andersrum)
+//    println("Nach quicksort " + quicksort(li_andersrum))
+//    println("blebtdrinTest " + test(li, (x => x >= 5))) 
     println("Ausgangsliste = " + li_unsort)
     println("Nach quicksort " + quicksortEinsPunktNull(li_unsort))
   }
@@ -39,6 +42,8 @@ object Ue02 {
     
 //    Unterteile eine Liste gemäß eines Pivots
     def divide(l: List[Int], p : Int) : List[Int] = {
+      println("List l ist = " + l)
+      println("p  ist = " + p)
       if (l == Nil) List(p)
       else 
         if(l.head < p) sort(divide(l.tail,p), l.head)
@@ -63,11 +68,14 @@ object Ue02 {
   	  
 //    die eine Liste aufteilt in zwei Listen, deren Elemente kleiner oder kleinergleich bzw. größergleich oder größer als x sind 
   	  def split (l: List[Int], x: Int): (List[Int], List[Int]) = {
+  	    println("in split l = " + l)
+  	    println("in split x = " + x)
 //  	    val l1 : List(List[Int], List[Int])
-//  			 if (l == Nil) List(List(), List())
-//  			 else
-  			   if (x >= l.head) split(l.tail, x)
-  			   else split(l.tail, x)
+  			 if (l == Nil) (List(), List())
+  			 else
+//  			   if (x <= l.head) (List(l.head)  split(l.tail, x))
+//  			   else split(l.tail, x)
+  			   (List(1,2,3,4), List(5,6,7,8))
   	  }
   	  
 //    die zwei sortierte Listen zu einer sortierten Liste mit allen Elementen beider Listen zusammenfügt
