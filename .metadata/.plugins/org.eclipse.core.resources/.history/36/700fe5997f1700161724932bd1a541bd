@@ -1,0 +1,110 @@
+object Ue01 {
+  
+  val li : List[Int] = List (1, 1, 2, 3, 3, 4, 5, 7)
+//  val li : List[Int] = List ()
+  val lir = List (3,4,5)
+  
+  def main (args: Array[String]) {
+    println("Die Ausgangsliste \"li\" " + li)
+    println("Länge der Liste " + length(li));
+    println("Die ersten n(=3) Elemente der Liste " + take(li, 3))
+    println("Die Liste, ohne die ersten n(=3) Elemente " + drop(li, 3))
+    println("Die Liste ohne doppelte (aufenanderfolgende) Elemente " + uniq(li))
+    println(dupall(lir))
+    println(insertAt(lir, 2, 412))
+    println(removeAt(lir, 0))
+    val lu : List[(Char,Int)] = List (('h',1),('a',1),('l',2),('o',1))
+//    println(lu(0))
+//    lu.updated(0,'a') 
+//    println(lu)
+//    println(lu.match(('h',)))
+//    println(lir)
+    
+    println("hallöchenpoppöchen");
+    println(zählZeichen("hallöchenpoppöchen"));
+    println("huhu");
+    println(zählZeichen("huhu"));
+    println("Scala");
+    println(zählZeichen("Scala"));
+    println(zählZeichen(""));
+  }
+  
+//    Länge der Liste
+  def length (l: List[Int]): Int = {
+    if (l == Nil) 0
+    else length(l.tail) +1
+  }
+  
+
+ 
+//  erste n Elemente der Liste, 
+   def take (l: List[Int], n: Int)  : List[Int] = {
+     if (l == Nil || n == 0) Nil
+     else l.head :: take(l.tail, n-1)
+  }
+//   Liste ohne erste n Elemente
+  def drop (l: List[Int], n: Int)  : List[Int] = {
+    if (l == Nil) Nil
+    else if(n == 0 ) l
+    else drop(l.tail, n-1)
+  }
+  
+  
+ //  die Liste l ohne doppelte Elemente (mehrfach aufeinanderfolgende gleiche Elemente werden weggelassen)
+  def uniq (l: List[Int]): List[Int] = {
+    if ( l == Nil) Nil
+    else if(l.tail == Nil) l
+    else
+      if (l.head != l.tail.head)l.head :: uniq(l.tail)
+      else uniq(l.tail)
+  }   
+  
+ 
+// die Liste l, in der alle Elemente verdoppelt sind 
+  def dupall (l: List[Int]): List[Int] = {
+     if (l == Nil) Nil
+     else if(l.tail == Nil) l.head :: l
+     else l.head :: l.head :: dupall(l.tail)
+  }
+ 
+ 
+// Element an n-ter Stelle einfügen
+  def insertAt (l: List[Int], i: Int, x: Int): List[Int] = {
+   if (l == Nil) Nil
+   else
+//     if (i == 0) x :: l.head :: l.tail
+     if (i == 0) x :: l
+     else l.head :: insertAt(l.tail, i-1, x)
+  }
+ 
+ 
+//    Element an n-ter Stelle  löschen 
+  def removeAt (l: List[Int], i: Int): List[Int] = {
+    if (l == Nil) Nil 
+    else 
+      if (i == 0) l.tail 
+      else l.head :: removeAt(l.tail, i-1)
+  }
+ 
+
+//  Erstelle eine Statistik-Funktion, die eine Liste der Häufigkeiten von Buchstaben im String ermittelt. 
+  def zählZeichen (s: String): List[(Char, Int)] = {
+    def zählString (s:String) : Int = {
+      if (s == "") +0
+      else zählString(s.tail) +1
+    }
+    def zählen (l : List[(Char, Int)], c : Char) : List [(Char, Int)] = {
+      if (l == Nil) List((c,1))
+      else
+        if (l.head._1 == c) (c,l.head._2 +1) :: l.tail
+        else l.head :: zählen(l.tail,c)
+    }
+//    println(zählString(s))
+    if (s == "") Nil
+    else if (zählString(s) == 1) List((s.head, 1))
+    else zählen(zählZeichen(s.tail), s.head)
+  }
+
+
+
+}

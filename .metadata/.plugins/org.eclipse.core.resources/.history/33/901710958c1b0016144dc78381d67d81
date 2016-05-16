@@ -1,0 +1,84 @@
+object Ue03 {
+  
+	val a = new Complex(5,-2)
+	val b = new Complex(3,4)
+	val c = -a
+	val d = new Complex(2,1)
+	val e = new Complex(1,-2)
+	val f = new Complex(0,-2)
+	
+	object Complex {
+		implicit def doublecomplex(r: Double) = Complex (r,0)
+	}
+	
+  def main (args: Array[String]) {
+		println(a + " + " + b + " = " + (a + b))
+		println(a + " - " + b + " = " + (a - b))
+		println("c = -a = " + c)
+		println(a + " * " + b + " = " + (a * b))
+//		println(d)
+//		println(e)
+		println(d + " / " + e + " = " + (d / e))
+		println(f + " + 8.0 = " + (f + 8.0))
+		println("Inverse von a = " + a.inverse)
+		
+		println("\nRationale Zahlen:")
+		val s = new Rat(36,48)
+		val t = new Rat(36,48)
+//		val t = new Rat(3,48)
+//		val x = new Rat(114,12)
+		val x = new Rat(2,2)
+		println("s = " + s)
+		println("t = " + t)
+		println(s + " * " + t + " = " + (s*t))
+		println(s + " / " + t + " = " + (s/t))
+		println(s + " + " + t + " = " + (s+t))
+		println(s + " - " + t + " = " + (s-t))
+//		println(s+t)
+  }
+  
+  case class Rat(zähler : Int, nenner : Int) {
+    def this (x : Int) = this (x,1)
+    require (nenner != 0, "Nenner darf nicht 0 sein!")
+    def ggT(z : Int, n : Int) : Int = {
+      def searchggT (z : Int, n : Int, x : Int) : Int = {
+        if (x == 1) 1
+        else if(z % x == 0 & n % x == 0) x
+        else searchggT(z, n, x-1)
+      }
+//    if (zähler % nenner == 0) zähler/nenner
+    searchggT(z, n, n-1)
+      
+    }
+    def * (that:Rat) = Rat(zähler * that.zähler, nenner * that.nenner)
+		def / (that:Rat) = Rat(zähler * that.nenner, nenner * that.zähler) 
+		def + (that:Rat) = if (nenner != that.nenner) Rat((zähler * that.nenner + that.zähler * nenner) , nenner * that.nenner) else Rat(zähler + that.zähler, nenner)
+		def - (that:Rat) = if (nenner != that.nenner) Rat((zähler * that.nenner - that.zähler * nenner) , nenner * that.nenner) else Rat(zähler - that.zähler, nenner)
+		  
+    private val g = ggT(zähler, nenner)
+//    if (g !=1) println("der ggT von " + zähler + "/" + nenner + " ist " + g)
+    def numer = if (g == 1) zähler else zähler/g
+    def denorm = if (g == 1) nenner else nenner/g
+//    def numer =  zähler/g
+//    def denorm = nenner/g
+//  override def toString = zähler + "/" + nenner
+  override def toString = if (zähler % nenner == 0) "" + zähler/nenner else numer + "/" + denorm
+  
+  }
+  
+
+  case class Complex(re : Double, im : Double) {
+    override def toString = if (im < 0 ) re + " " + im + "*i" else if (re == 0) "+" + im + "*i" else re + " +" + im + "*i"
+    def + (that:Complex) = Complex(re + that.re, im + that.im)
+    def - (that:Complex) = Complex(re - that.re, im - that.im)
+    def * (that:Complex) = Complex(re * that.re - im * that.im,  re * that.im + that.re * im)
+//    def / (that:Complex) = Complex((re * that.re + im * that.im) / (that.re * that.re) + (that.im * that.im), (im * that.re - re * that.im) / (that.re * that.re) + (that.im * that.im)) 
+    def / (that:Complex) = Complex((re * that.re + im * that.im)  / (that.re * that.re + that.im * that.im), (im * that.re - re * that.im) / (that.re * that.re + that.im * that.im)) 
+    def inverse = {
+      val denominator = re * re + im * im
+      Complex(re/denominator, im/denominator)
+      }
+    def unary_- = Complex(-re,-im)
+  }
+  
+}

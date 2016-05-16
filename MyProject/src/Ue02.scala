@@ -4,9 +4,10 @@ object Ue02 {
   val li_unsort : List[Int] = List (4, 2, 5, 1, 3)
   val li: List[Int] = List (8, 6, 2, 4, 5, 3, 1)
   val li_andersrum: List[Int] = List (1, 3, 5, 4, 6, 8)
-  val li_unsort_test : List[Int] = List (1, 2, 3)
+  val li_unsort_test : List[Int] = List (2, 1, 3)
   
   val euro = List(1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000)
+  val euro_rev = euro.reverse
   val us_dollar = List(1, 5, 10, 25, 50, 100, 200, 500, 1000, 2000, 5000)
   val gulden = List(5, 10, 25, 100, 200, 250, 500, 1000, 2500, 5000)
 //  val nz_dollar = List(5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000)
@@ -14,7 +15,7 @@ object Ue02 {
   
 //  Main
   def main (args: Array[String]) {
-	  println("Quicksort:")
+//	  println("Quicksort:")
 //	  println("Ausgangsliste = " + falle)
 //	  println("Nach quicksort " + quicksort(falle))
 //	  println("Ausgangsliste = " + li_unsort)
@@ -24,9 +25,38 @@ object Ue02 {
 //    println("Ausgangsliste = " + li_andersrum)
 //    println("Nach quicksort " + quicksort(li_andersrum))
 //    println("blebtdrinTest " + test(li, (x => x >= 5))) 
-    println("Ausgangsliste = " + li_unsort)
-    println("Nach quicksort " + quicksortEinsPunktNull(li_unsort))
+//    println("Ausgangsliste = " + li_unsort)
+	  println("Ausgangsliste = " + li_unsort_test)
+    println(quicksortNeu(li_unsort_test))
+//    println("Ausgangsliste = " + li)
+//    println(quicksortNeu(li))
+//    println("Nach quicksort " + quicksortEinsPunktNull(li_unsort))
+//	  println("Münzbeträge:")
+//	  println("Euromünzen: " + euro)
+//	  println("Es gibt " + münzStückl(euro, 5) + " Möglichkeiten 5 Euro darzustellen")
+//	  println("Es gibt " + münzStückl(euro, 278) + " Möglichkeiten 278  Euro darzustellen")
+//	  println("Guldenmünzen: " + gulden)
+//	  println("Es gibt " + münzStückl(gulden, 15) + " Möglichkeiten 15  Gulden darzustellen")
+//	  println("UsDollarmünzen: " + us_dollar)
+//	  println("Es gibt " + münzStückl(us_dollar, 150) + " Möglichkeiten 150  Dollar darzustellen")
   }
+	def quicksortNeu(l: List[Int]): List[Int] = {
+//	   die eine Liste aufteilt in zwei Listen, deren Elemente kleiner oder kleinergleich bzw. größergleich oder größer als x sind 
+  	  def split (l: List[Int], pivot: Int, temp: (List[Int],List[Int])): (List[Int], List[Int]) = {
+//  	    val l1 : List(List[Int], List[Int])
+  			 if (l == Nil) temp
+  			 else
+  			   if (pivot >= l.head) {
+  				   println("in split l.head = " + l.head)
+  				   split(l.tail, pivot, (l.head:: temp._1,temp._2))
+  			   }
+  			   else
+  				   split(l.tail, pivot, (temp._1, l.head:: temp._2))
+  	  }
+  	  if(l == Nil) Nil
+  	  else println("split=" + split(l.tail, l.head, (List(),List())))
+  			   List(1,2,3,4)
+	}
 	
 // Quicksort I - Pivot suchen, Liste gemäß Pivot teilen, sortieren und wieder zusammensetzen
   def quicksort(l: List[Int]) : List[Int] = {
@@ -42,8 +72,8 @@ object Ue02 {
     
 //    Unterteile eine Liste gemäß eines Pivots
     def divide(l: List[Int], p : Int) : List[Int] = {
-      println("List l ist = " + l)
-      println("p  ist = " + p)
+//      println("List l ist = " + l)
+//      println("p  ist = " + p)
       if (l == Nil) List(p)
       else 
         if(l.head < p) sort(divide(l.tail,p), l.head)
@@ -111,6 +141,30 @@ object Ue02 {
   
 //  Money
   def münzStückl (werte: List[Int], betrag: Int): Int = {
-    4
+    if (betrag == 0) +1
+    else if (werte == Nil || betrag < 0) +0
+    else münzStückl(werte, betrag-werte.head) + münzStückl(werte.tail, betrag)
+//    werte.reverse
+//    println(werte)
+//    if (werte == Nil) 0
+//    else
+//      if (betrag >= werte.head) münzStückl(werte, betrag-werte.head) +1
+//      else münzStückl(werte.tail, betrag)
+//    val l1 : List [(Int,Int)] = Nil
+//    def zählen(wieOft : List[(Int,Int)], werte : List[Int], betrag : Int) : List[(Int, Int)] = {
+//      if (betrag <= )
+//      if (wieOft == Nil && betrag. == werte) List((betrag,1))
+//      else
+//        if (wieOft.head._1 <= betrag) (betrag, wieOft.head._2 +1) :: wieOft.tail
+//        else wieOft.head :: zählen(wieOft.tail, werte, betrag);
+//    }
+//    
+//    if (werte == Nil) 0
+//    else {
+//    		  if (werte.head <= betrag) zählen(l1, werte, betrag)
+//    }
+//      4
   }
+  
+  
 }

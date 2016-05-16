@@ -20,9 +20,13 @@ object Ue01 {
 //    println(lu.match(('h',)))
 //    println(lir)
     
+    println("hallöchenpoppöchen");
     println(zählZeichen("hallöchenpoppöchen"));
+    println("huhu");
     println(zählZeichen("huhu"));
+    println("Scala");
     println(zählZeichen("Scala"));
+    println("Ein leerer String");
     println(zählZeichen(""));
   }
   
@@ -60,7 +64,6 @@ object Ue01 {
 // die Liste l, in der alle Elemente verdoppelt sind 
   def dupall (l: List[Int]): List[Int] = {
      if (l == Nil) Nil
-     else if(l.tail == Nil) l.head :: l
      else l.head :: l.head :: dupall(l.tail)
   }
  

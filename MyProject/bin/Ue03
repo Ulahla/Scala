@@ -1,0 +1,17 @@
+class Ue03 (zähler : Int, nenner : Int) {
+  require (nenner != 0, "Nenner darf nicht 0 sein!")
+  def this (x : Int) = this (x,1)
+//  override def toString = zähler + "/" + nenner
+  overrife def toString = numer + "/" + denorm
+  
+  private ggT(a : Int, b : Int){}
+  private val g = ggT(zähler, nenner)
+  def numer = zähler/g
+  def denorm = nenner / g
+}
+
+case class Complex(re : Double, im : Double) {
+  override def toString = re + "+ i *" + im
+  def + (that.Complex) = Complex(re + that.re, im + that.im)
+  def inverse = {val denominator = re * re }
+}
